@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ログイン成功</title>
+</head>
+<body>
+    <h1>ログインに成功しました</h1>
+    <p>{{ request.user.username }} さん、こんにちは！</p>
+    <p>
+        <a href="{% url 'index' %}">トップへ戻る</a>
+    </p>
+</body>
+</html>

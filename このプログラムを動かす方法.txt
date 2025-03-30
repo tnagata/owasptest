@@ -1,0 +1,5 @@
+このプログラムを動かす方法：
+
+uv run manage.py runserver
+
+ブラウザーで http://localhost:8000

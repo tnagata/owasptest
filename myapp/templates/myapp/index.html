@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ユーザー登録・サインイン</title>
+</head>
+<body>
+    <h1>ユーザー登録</h1>
+    <form method="POST" action="{% url 'register' %}">
+        {% csrf_token %}
+        {{ reg_form.as_p }}
+        <button type="submit">登録</button>
+    </form>
+
+    <h2>サインイン</h2>
+    <form method="POST" action="{% url 'login' %}">
+        {% csrf_token %}
+        {{ login_form.as_p }}
+        <button type="submit">サインイン</button>
+    </form>
+
+    <hr>
+    {% if messages %}
+      <ul>
+        {% for message in messages %}
+          <li>{{ message }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+</body>
+</html>
