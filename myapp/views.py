@@ -39,12 +39,19 @@ def user_login(request):
             user = authenticate(username=username, password=password)
             if user is not None:
                 login(request, user)
-                messages.success(request, 'ログインに成功しました。')
-                return redirect('success')
+                return redirect('success')  # 成功時はリダイレクトのみ
             else:
                 messages.error(request, 'ユーザー名またはパスワードが正しくありません。')
         else:
             messages.error(request, 'フォームの入力に誤りがあります。')
+        
+        # エラー時は常にここでレンダリング
+        return render(request, 'myapp/index.html', {
+            'reg_form': RegistrationForm(),
+            'login_form': form
+        })
+    
+    # GETリクエストの場合
     return redirect('index')
 
 def success(request):

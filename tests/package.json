@@ -1,0 +1,17 @@
+{
+  "name": "tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "multiple_users_test.mjs",
+  "type": "module",
+  "scripts": {
+    "test": "node multiple_users_test.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "csv-parse": "^5.6.0",
+    "puppeteer": "^x.x.x"
+  }
+}

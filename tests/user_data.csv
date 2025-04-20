@@ -1,0 +1,6 @@
+username,password,shouldSucceed
+user1,password1234,true
+user2,password5678,true
+user1,wrongpass123,false
+nonexistent,password7890,false
+user3,password1234,true
